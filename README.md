@@ -2,14 +2,14 @@
 
 ## TODO
 
-- [ ]Actualizar libft
-- [ ]Investigar
-- [ ]Esquema del programa
-- [ ]Parseo
+- [ ] Actualizar libft
+- [ ] Investigar
+- [ ] Esquema del programa
+- [ ] Parseo
 
 ## Filosofos
 
-Filosofo come piensa xo duerme.
+Filosofo come, piensa xo duerme.
 Tantos tenedores como filosofos.
 Cogen dos tenedores cada filosofo al comer.
 
@@ -33,11 +33,11 @@ Libft esta prohibida.
 
 ### Comunes
 #### Usados antes
-- void* memset(void *dest, int c, size_t count): Cambia los primeros count miembros de dest a c(unsigned char)
-- int printf(const char *format-string, argument-list): Imprime los char * y devuelve el numero de char imprimidos.
-- void* malloc(int s): Asigna s bytes de memoria
-- void free(void *m): Libera memoria asignada
-- ssize_t write(int fd, const void *buff, size_t n): Imprime n bytes de buff al fd.
+- void* **memset**(void *dest, int c, size_t count): Cambia los primeros count miembros de dest a c(unsigned char)
+- int **printf**(const char *format-string, argument-list): Imprime los char * y devuelve el numero de char imprimidos.
+- void* **malloc**(int s): Asigna s bytes de memoria
+- void **free**(void *m): Libera memoria asignada
+- ssize_t **write**(int fd, const void *buff, size_t n): Imprime n bytes de buff al fd.
 #### Hilos
 - pthread_create: 
 - pthread_detach: 

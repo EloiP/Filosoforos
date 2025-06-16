@@ -43,6 +43,7 @@ mem:
 
 clean:
 	@rm -rf $(OBJ_DIR)  # Remove object files
+	@rm -rf $(DEPS_DIR)  # Remove deps files
 	@rm -rf $(LIB_DIR) # Remove libs
 
 fclean: clean

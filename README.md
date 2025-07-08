@@ -2,7 +2,6 @@
 
 ## TODO
 
-- [ ] Actualizar libft
 - [ ] Investigar
 - [ ] Esquema del programa
 - [ ] Parseo
@@ -39,19 +38,19 @@ Libft esta prohibida.
 - void **free**(void *m): Libera memoria asignada
 - ssize_t **write**(int fd, const void *buff, size_t n): Imprime n bytes de buff al fd.
 #### Hilos
-- pthread_create: 
-- pthread_detach: 
-- pthread_join: 
+- pthread_create: Inicia un hilo
+- pthread_detach: Separa un hilo, se autotermina 
+- pthread_join: Termina un hilo
 #### Milis
 - usleep: 
 - gettimeofday: 
 
 ### Normal
 #### Mutex
-- pthread_mutex_init
-- pthread_mutex_destroy
-- pthread_mutex_lock
-- pthread_mutex_unlock
+- pthread_mutex_init: Inicia la reserva de la variable.
+- pthread_mutex_destroy: Termina la reserva de la variable.
+- pthread_mutex_lock: Bloquea el acceso a esta variable por otros procesos.
+- pthread_mutex_unlock: Desbloquea el acceso a esta variable por otros procesos.
 
 ### Bonus
 #### Procesos

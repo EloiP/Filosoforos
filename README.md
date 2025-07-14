@@ -43,7 +43,7 @@ Libft esta prohibida.
 - pthread_join: Termina un hilo
 #### Milis
 - usleep: 
-- gettimeofday: 
+- int gettimeofday(struct timeval, struct timezone): Obtiene un int que representa los milis.
 
 ### Normal
 #### Mutex
@@ -54,13 +54,13 @@ Libft esta prohibida.
 
 ### Bonus
 #### Procesos
-- fork
-- kill
-- exit
-- waitpid
+- fork: Subdivide en 2 procesos
+- kill: Elimina un proceso
+- exit: Sale del programa
+- waitpid: Espera a que termine un proceso
 #### Semaforo
-- sem_open
-- sem_close
+- sem_t * sem_open (const char *name, int oflag, mode_t mode, unsigned value): Devuelve la direccion a un nuevo objeto semaforo.
+- int sem_close (sem_t * sem): Cierra el objeto semaforo.
 - sem_post
 - sem_wait
 - sem_unlink

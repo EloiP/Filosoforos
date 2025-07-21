@@ -1,28 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   filo.h                                             :+:      :+:    :+:   */
+/*   terminate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/21 13:29:11 by epascual         ###   ########.fr       */
+/*   Created: 2025/07/21 12:46:40 by epascual          #+#    #+#             */
+/*   Updated: 2025/07/21 12:51:12 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILO_H
-# define FILO_H
-//Includes
-# include <stdio.h>
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <pthread.h>
-# include <sys/time.h>
-
-//Structs
-
-//Funciones
-int	ft_atoi(const char *str);
-int	parsn(int n, int m, int c, int v);
-#endif
+#include "filo.h"

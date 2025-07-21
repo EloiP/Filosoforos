@@ -42,7 +42,7 @@ Libft esta prohibida.
 - pthread_detach: Separa un hilo, se autotermina 
 - pthread_join: Termina un hilo
 #### Milis
-- usleep: 
+- int usleep(useconds_t usec): espera durante usec milis, 0 exito, -1 error
 - int gettimeofday(struct timeval, struct timezone): Obtiene un int que representa los milis.
 
 ### Normal

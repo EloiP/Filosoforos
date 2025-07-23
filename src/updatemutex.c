@@ -1,33 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   filo.h                                             :+:      :+:    :+:   */
+/*   updatemutexes.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/23 17:07:48 by epascual         ###   ########.fr       */
+/*   Created: 2025/07/23 17:08:16 by epascual          #+#    #+#             */
+/*   Updated: 2025/07/23 17:08:28 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILO_H
-# define FILO_H
-//Includes
-# include <stdio.h>
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <pthread.h>
-# include <sys/time.h>
-
-//Structs
-
-//Funciones
-int			ft_atoi(const char *str);
-int			parsn(int n, int m, int c, int v);
-
-//time
-long long	actual(void);
-long long	timediff(long long past, long long pres);
-
-#endif
+#include "filo.h"

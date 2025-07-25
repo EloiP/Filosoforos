@@ -6,20 +6,21 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 17:29:59 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/23 17:47:35 by epascual         ###   ########.fr       */
+/*   Updated: 2025/07/25 11:39:43 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filo.h"
 
 //Imprime errores por su salida
-void	ft_puterror(char const *s)
+int	ft_puterror(char const *s)
 {
 	while (*s != 0)
 	{
 		write(2, s, 1);
 		s++;
 	}
+	return (1);
 }
 
 //Imprime el estado del filosofo

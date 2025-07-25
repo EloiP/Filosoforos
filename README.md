@@ -4,7 +4,11 @@
 
 - [ ] Investigar
 - [ ] Esquema del programa
-- [ ] Parseo
+- [x] Parseo
+- [ ] Structs
+- [ ] Mutexes
+- [ ] Ejecuciones
+- [ ] Debuging
 
 ## Filosofos
 
@@ -12,7 +16,7 @@ Filosofo come, piensa xo duerme.
 Tantos tenedores como filosofos.
 Cogen dos tenedores cada filosofo al comer.
 
-Argumentos: 
+Argumentos:
 - number_of_philosophers [1, 200]
 - time_to_die [60, inf]
 - time_to_eat [60, inf]

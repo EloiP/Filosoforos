@@ -6,35 +6,21 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 16:38:27 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/23 18:03:58 by epascual         ###   ########.fr       */
+/*   Updated: 2025/07/25 12:54:02 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filo.h"
 
 int	main(int argc, char **argv)
-{/*
-	int	n;
-	int	m;
-	int	c;
-	int	v;
+{
+	t_n	normas;
 
-	v = -1;
-	n = ft_atoi(argv[1]);
-	m = ft_atoi(argv[2]);
-	c = ft_atoi(argv[3]);
-	if (argc == 5)
-		v = ft_atoi(argv[4]);
-	if (!parsn(n, m, c, v))
-		return (1);
-	*/
-	int	ret;
-
-	if (argc!= 5 && argc != 6)
+	if (argc != 5 && argc != 6)
 		return (ft_puterror("Argument number Error\n"));
-	if (ret = init_data(&normas, argc, argv))
+	if (init_data(&normas, argc, argv))
 		return (ft_puterror("Argument parsing Error\n"));
 	if (launcher(&normas))
-		return (ft_puterror("Thread Error\n")):
+		return ((ft_puterror("Thread Error\n"))):
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/25 12:49:16 by epascual         ###   ########.fr       */
+/*   Updated: 2025/07/28 19:35:01 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,11 @@ typedef struct s_filo
 {
 	int		id;
 	t_hilo	hid;
+	int		status;
 	int		*lfork;
 	int		*rfork;
+	t_mutex	lfork;
+	t_mutex	rfork;
 	tim		ultcomida;
 	t_n		normas;
 }	t_filo;

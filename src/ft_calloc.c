@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   launch.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/23 17:25:00 by epascual          #+#    #+#             */
-/*   Updated: 2025/08/03 01:55:19 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:35:48 by epascual          #+#    #+#             */
+/*   Updated: 2025/08/03 01:37:23 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filo.h"
 
-void	detach_philo_array(t_philo **philo_array)
+void	*ft_calloc(unsigned long nelem)
 {
-	t_hilo	thread;
-	size_t		i;
+	void	*ptr;
 
-	i = 0;
-	while (philo_array[i])
-	{
-		pthread_create(&thread, NULL, \
-				(t_voidpp) philo_routine, philo_array[i]);
-		pthread_detach(thread);
-		i++;
-	}
-	//pthread_mutex_unlock(philo_array[0]->print);
+	if ((nelem) > 2147483647)
+		return (NULL);
+	ptr = (void *)malloc(nelem);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, nelem);
+	return (ptr);
 }

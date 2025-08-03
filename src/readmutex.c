@@ -11,3 +11,20 @@
 /* ************************************************************************** */
 
 #include "filo.h"
+
+t_mutex	*ft_mutex_init(void)
+{
+	t_mutex	*mutex;
+
+	mutex = ft_calloc(sizeof(t_mutex));
+	if (!mutex)
+		return (NULL);
+	pthread_mutex_init(mutex, NULL);
+	return (mutex);
+}
+
+void	ft_mutex_destroy(t_mutex *mutex)
+{
+	pthread_mutex_destroy(mutex);
+	free(mutex);
+}

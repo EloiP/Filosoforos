@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/28 19:35:01 by epascual         ###   ########.fr       */
+/*   Updated: 2025/08/03 01:37:39 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef struct s_normas
 
 //Funciones
 int		ft_atoi(const char *str);
+void	*ft_calloc(unsigned long nelem);
 int		parsn(int n, int m, int c, int v);
 
 //time

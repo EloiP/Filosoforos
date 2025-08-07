@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/08/03 01:37:39 by epascual         ###   ########.fr       */
+/*   Updated: 2025/08/07 13:34:09 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,6 @@ typedef pthread_t		t_hilo;
 typedef pthread_mutex_t	t_mutex;
 
 //Structs
-//Info de cada filosofo
-typedef struct s_filo
-{
-	int		id;
-	t_hilo	hid;
-	int		status;
-	int		*lfork;
-	int		*rfork;
-	t_mutex	lfork;
-	t_mutex	rfork;
-	tim		ultcomida;
-	t_n		normas;
-}	t_filo;
-
 //Info de las normas
 //n = numero filosofos m = milis morir c=milis comer v=veces comer
 typedef struct s_normas
@@ -49,6 +35,20 @@ typedef struct s_normas
 	int	c;
 	int	v;
 }	t_n;
+
+//Info de cada filosofo
+typedef struct s_filo
+{
+	int		id;
+	t_hilo	hid;
+	char	status;
+	int		*lfork;
+	int		*rfork;
+	t_mutex	mlfork;
+	t_mutex	mrfork;
+	t_im	ultcomida;
+	t_n		normas;
+}	t_filo;
 
 //Funciones
 int		ft_atoi(const char *str);

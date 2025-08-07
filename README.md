@@ -32,7 +32,7 @@ Cambios de filosofos:
 
 ## Funciones permitidas
 
-Libft esta prohibida.
+⚠️ Libft esta prohibida.
 
 ### Comunes
 #### Usados antes
@@ -42,19 +42,19 @@ Libft esta prohibida.
 - void **free**(void *m): Libera memoria asignada
 - ssize_t **write**(int fd, const void *buff, size_t n): Imprime n bytes de buff al fd.
 #### Hilos
-- pthread_create: Inicia un hilo
-- pthread_detach: Separa un hilo, se autotermina 
-- pthread_join: Termina un hilo
+- int **pthread_create**(pthread_t *restrict thread, const pthread_attr_t *restrict attr, typeof(void *(void *)) *start_routine, void *restrict arg): Inicia un hilo. Recibe un hilo thread, que empieza por la funcion start_routine con parametros arg, el thread tiene los atributos attr. Devuelve standard.
+- int **pthread_detach**(pthread_t thread): Separa un hilo, se autotermina 
+- int **pthread_join**(pthread_t thread, void **value_ptr): Termina un hilo
 #### Milis
-- int usleep(useconds_t usec): espera durante usec milis, 0 exito, -1 error
-- int gettimeofday(struct timeval, struct timezone): Obtiene un int que representa los milis.
+- int **usleep**(useconds_t usec): espera durante usec milis, 0 exito, -1 error
+- int **gettimeofday**(struct timeval, struct timezone): Obtiene un int que representa los milis.
 
 ### Normal
 #### Mutex
-- pthread_mutex_init: Inicia la reserva de la variable.
-- pthread_mutex_destroy: Termina la reserva de la variable.
-- pthread_mutex_lock: Bloquea el acceso a esta variable por otros procesos.
-- pthread_mutex_unlock: Desbloquea el acceso a esta variable por otros procesos.
+- int **pthread_mutex_init**(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr): Inicia la reserva de la variable, inicia unlocked. Recibe mutex y atributos para mutex, si le pones NULL recibe los normales. Devuelve 0 en exito.
+- int **pthread_mutex_destroy**(pthread_mutex_t *mutex): Termina la reserva de la variable.
+- int **pthread_mutex_lock(**pthread_mutex_t *mutex): Bloquea el acceso a esta variable por otros procesos. Recibe mutex que bloquear. Devuelve 0 en exito numero en error.
+- int **pthread_mutex_unlock**(pthread_mutex_t *mutex): Desbloquea el acceso a esta variable por otros procesos. Recibe mutex que desbloquear. Devuelve 0 en exito numero en error.
 
 ### Bonus
 #### Procesos

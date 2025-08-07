@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 18:54:55 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/25 12:22:46 by epascual         ###   ########.fr       */
+/*   Updated: 2025/08/07 13:32:10 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	parsn(int n, int m, int c, int v)
 		return (0);
 	if (c < 60 || c > 200)
 		return (0);
-	if (v == -1)
-		return (1);
 	if (v < 0 || v > 2147483647 || v == -1)
 		return (0);
 	return (1);

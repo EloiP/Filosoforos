@@ -6,8 +6,16 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 12:48:11 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/21 12:50:54 by epascual         ###   ########.fr       */
+/*   Updated: 2025/08/07 14:28:49 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filo.h"
+
+void	rutina(t_filo*filosofo)
+{
+	while (1)
+
+		break;
+	}
+}

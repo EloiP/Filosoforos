@@ -6,13 +6,13 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 17:25:00 by epascual          #+#    #+#             */
-/*   Updated: 2025/08/03 01:55:19 by epascual         ###   ########.fr       */
+/*   Updated: 2025/08/07 14:13:20 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filo.h"
 
-void	detach_philo_array(t_philo **philo_array)
+void	detach_philo_array(t_filo **philo_array)
 {
 	t_hilo	thread;
 	size_t		i;
@@ -21,7 +21,7 @@ void	detach_philo_array(t_philo **philo_array)
 	while (philo_array[i])
 	{
 		pthread_create(&thread, NULL, \
-				(t_voidpp) philo_routine, philo_array[i]);
+				(void) rutina, philo_array[i]);
 		pthread_detach(thread);
 		i++;
 	}

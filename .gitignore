@@ -1,0 +1,17 @@
+# vim temporal files
+*.swp
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+
+# Libraries
+*.a
+
+# Executables
+philosofers
+
+#bin files
+bin/

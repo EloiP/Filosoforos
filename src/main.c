@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 16:38:27 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/25 12:54:02 by epascual         ###   ########.fr       */
+/*   Updated: 2025/08/07 14:56:28 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	main(int argc, char **argv)
 	if (init_data(&normas, argc, argv))
 		return (ft_puterror("Argument parsing Error\n"));
 	if (launcher(&normas))
-		return ((ft_puterror("Thread Error\n"))):
+		return ((ft_puterror("Thread Error\n")));
 	return (0);
 }

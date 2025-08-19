@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 17:25:00 by epascual          #+#    #+#             */
-/*   Updated: 2025/08/07 14:13:20 by epascual         ###   ########.fr       */
+/*   Updated: 2025/08/07 14:54:01 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	detach_philo_array(t_filo **philo_array)
 {
 	t_hilo	thread;
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	while (philo_array[i])

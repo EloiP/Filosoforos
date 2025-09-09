@@ -12,7 +12,7 @@
 
 #include "filo.h"
 
-long long	actual(void)
+t_im	actual(void)
 {
 	struct timeval	t;
 
@@ -20,7 +20,7 @@ long long	actual(void)
 	return ((t.tv_sec * 1000) + (t.tv_usec / 1000));
 }
 
-long long	timediff(long long past, long long pres)
+t_im	timediff(t_im past, t_im pres)
 {
 	return (pres - past);
 }

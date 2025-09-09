@@ -12,18 +12,18 @@
 
 #include "filo.h"
 
-void	detach_philo_array(t_filo **philo_array)
+void	detach_philo_array(t_filo **philos)
 {
 	t_hilo	thread;
 	size_t	i;
 
 	i = 0;
-	while (philo_array[i])
+	while (philos[i])
 	{
 		pthread_create(&thread, NULL, \
-				(void) rutina, philo_array[i]);
+				(void) rutina, philos[i]);
 		pthread_detach(thread);
 		i++;
 	}
-	//pthread_mutex_unlock(philo_array[0]->print);
+	//pthread_mutex_unlock(philos[0]->print);
 }

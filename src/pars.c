@@ -37,4 +37,5 @@ int	init_data(t_n*norm, int argc, char**argv)
 		norm->v = ft_atoi(argv[4]);
 	if (!parsn(norm->n, norm->m, norm->c, norm->v))
 		return (1);
+	return(0);
 }

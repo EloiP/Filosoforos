@@ -15,12 +15,13 @@
 int	main(int argc, char **argv)
 {
 	t_n	normas;
+	t_filo *philos;
 
 	if (argc != 5 && argc != 6)
 		return (ft_puterror("Argument number Error\n"));
-	if (init_data(&normas, argc, argv))
+	if (init(&normas, &philos, argc, argv))
 		return (ft_puterror("Argument parsing Error\n"));
-	if (launcher(&normas))
+	if (launcher(&normas, &philos))
 		return ((ft_puterror("Thread Error\n")));
 	return (0);
 }

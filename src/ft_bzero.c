@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 16:38:27 by epascual          #+#    #+#             */
-/*   Updated: 2025/09/15 17:41:34 by epascual         ###   ########.fr       */
+/*   Created: 2024/09/16 12:13:48 by epascual          #+#    #+#             */
+/*   Updated: 2025/09/16 13:10:07 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filo.h"
 
-int	main(int argc, char **argv)
+void	ft_bzero(void *s, size_t n)
 {
-	t_n		normas;
-	t_filo	*philos;
-
-	if (argc != 5 && argc != 6)
-		return (ft_puterror("Argument number Error\n"));
-	if (init(&normas, &philos, argc, argv))
-		return (ft_puterror("Argument parsing Error\n"));
-	if (launcher(&normas, &philos))
-		return ((ft_puterror("Thread Error\n")));
-	return (0);
+	while (0 < n--)
+	{
+		((unsigned char *)s)[n] = 0;
+	}
 }

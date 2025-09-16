@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/08/07 13:34:09 by epascual         ###   ########.fr       */
+/*   Updated: 2025/09/16 13:49:16 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ typedef struct s_filo
 	int		*rfork;
 	t_mutex	mlfork;
 	t_mutex	mrfork;
+	t_mutex	sinchro;
 	t_im	ultcomida;
 	t_n		normas;
 }	t_filo;
@@ -54,6 +55,8 @@ typedef struct s_filo
 int		ft_atoi(const char *str);
 void	*ft_calloc(unsigned long nelem);
 int		parsn(int n, int m, int c, int v);
+void	ft_bzero(void *s, size_t n);
+int		init_data(t_n*norm, int argc, char**argv);
 
 //time
 t_im	actual(void);
@@ -63,4 +66,5 @@ t_im	timediff(t_im past, t_im pres);
 int		ft_puterror(char const *s);
 void	ft_printestate(int status, t_filo *filo);
 
+void	rutina(t_filo*filosofo);
 #endif

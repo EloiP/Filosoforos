@@ -6,8 +6,14 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 12:46:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/07/21 12:51:12 by epascual         ###   ########.fr       */
+/*   Updated: 2025/09/15 17:35:08 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filo.h"
+
+void	terminate(t_filo**philos, )
+{
+	free(philos);
+	free();
+}

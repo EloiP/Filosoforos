@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 17:25:00 by epascual          #+#    #+#             */
-/*   Updated: 2025/08/07 14:54:01 by epascual         ###   ########.fr       */
+/*   Updated: 2025/09/15 17:43:00 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@ void	detach_philo_array(t_filo **philos)
 	i = 0;
 	while (philos[i])
 	{
-		pthread_create(&thread, NULL, \
-				(void) rutina, philos[i]);
+
+		if (pthread_create(&thread, NULL, \
+				(void) rutina, philos[i]) == -1)
+			terminate();
 		pthread_detach(thread);
 		i++;
-	}
-	//pthread_mutex_unlock(philos[0]->print);
+	}//pthread_mutex_unlock(philos[0]->print);
 }

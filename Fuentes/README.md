@@ -9,3 +9,5 @@
 [Parallel computing](https://web.archive.org/web/20201109032323/https://computing.llnl.gov/tutorials/parallel_comp/?)
 
 [POSIX THREADS](https://web.archive.org/web/20210306083711/https://computing.llnl.gov/tutorials/pthreads/)
+
+Es mejor que empiezen con mutex cerrado y que llo primero que hagan sea abrirlo para que empiezen sincrronizados.

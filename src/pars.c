@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 18:54:55 by epascual          #+#    #+#             */
-/*   Updated: 2025/08/07 13:32:10 by epascual         ###   ########.fr       */
+/*   Updated: 2025/09/15 17:42:26 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int	init_data(t_n*norm, int argc, char**argv)
 		norm->v = ft_atoi(argv[4]);
 	if (!parsn(norm->n, norm->m, norm->c, norm->v))
 		return (1);
-	return(0);
+	return (0);
 }

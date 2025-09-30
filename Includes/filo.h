@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/09/16 13:49:16 by epascual         ###   ########.fr       */
+/*   Updated: 2025/09/30 21:12:40 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,17 +54,40 @@ typedef struct s_filo
 //Funciones
 int		ft_atoi(const char *str);
 void	*ft_calloc(unsigned long nelem);
-int		parsn(int n, int m, int c, int v);
 void	ft_bzero(void *s, size_t n);
+
+//pars
+int		parsn(int n, int m, int c, int v);
 int		init_data(t_n*norm, int argc, char**argv);
+
+//launch
+void	detach_philo_array(t_filo **philos);
+
+//init
+t_mutex		**init_forks(t_n*normas);
+t_filo	fill_filo(int id, t_n *normas);
+int		init_filos(t_n *normas, t_filo **philos, t_mutex **forks);
+int		init(t_n *normas, t_filo **philos, int argc, char **argv, t_mutex**forks);
 
 //time
 t_im	actual(void);
 t_im	timediff(t_im past, t_im pres);
 
+//readmutex
+t_mutex	*ft_mutex_init(void);
+void	ft_mutex_destroy(t_mutex *mutex);
+
+//terminate
+void	terminate(t_filo**philos);
+void	free_forks(t_mutex**forks);
+
+//updatemutexes
+
 //print
 int		ft_puterror(char const *s);
-void	ft_printestate(int status, t_filo *filo);
+void	ft_printestate(char status, t_filo *filo, t_im time);
 
-void	rutina(t_filo*filosofo);
+
+//actions
+void	*rutina(t_filo*filosofo);
 #endif

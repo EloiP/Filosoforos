@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 18:54:55 by epascual          #+#    #+#             */
-/*   Updated: 2025/09/15 17:42:26 by epascual         ###   ########.fr       */
+/*   Updated: 2025/09/30 19:51:40 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@
 int	parsn(int n, int m, int c, int v)
 {
 	if (n < 1 || n > 200)
-		return (0);
+		return (1);
 	if (m < 60 || m > 200)
-		return (0);
+		return (1);
 	if (c < 60 || c > 200)
+		return (1);
+	if	(v == -1)
 		return (0);
-	if (v < 0 || v > 2147483647 || v == -1)
-		return (0);
-	return (1);
+	if (v < 0 || v > 2147483647)
+		return (1);
+	return (0);
 }
 
 //Mete datos en el struct de normas

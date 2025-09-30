@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 16:38:27 by epascual          #+#    #+#             */
-/*   Updated: 2025/09/15 17:41:34 by epascual         ###   ########.fr       */
+/*   Updated: 2025/09/30 21:18:29 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 int	main(int argc, char **argv)
 {
-	t_n		normas;
-	t_filo	*philos;
+	t_n		*normas;
+	t_filo	**philos;
+	t_mutex	**forks;
 
-	if (argc != 5 && argc != 6)
+	if (argc != 4 && argc != 5)
 		return (ft_puterror("Argument number Error\n"));
-	if (init(&normas, &philos, argc, argv))
+	normas = (t_n *)ft_calloc(sizeof(normas));
+	if (init(normas, philos, argc, argv, forks))
 		return (ft_puterror("Argument parsing Error\n"));
-	if (launcher(&normas, &philos))
+	
+	//printf("Argumentos: %i %i %i %i\n", normas->n, normas->m, normas->c, normas->v);
+	/*if (launcher(&normas, &philos))
 		return ((ft_puterror("Thread Error\n")));
-	return (0);
+	*/return (0);
 }

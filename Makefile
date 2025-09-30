@@ -3,7 +3,7 @@ NAME = philo
 CC = cc
 
 # Compiler flags
-CFLAGS = #-Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 BFLAGS = -g -fsanitize=address
 
 # Directories
@@ -40,6 +40,10 @@ norm:
 
 mem:
 	valgrind --track-origins=yes --show-leak-kinds=all --leakcheck=full ./$(NAME)
+
+test:
+	make all
+	./$(NAME) 100 100 100
 
 clean:
 	@rm -rf $(OBJ_DIR)  # Remove object files

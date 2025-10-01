@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/09/30 21:12:40 by epascual         ###   ########.fr       */
+/*   Updated: 2025/10/01 12:32:56 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ t_mutex	*ft_mutex_init(void);
 void	ft_mutex_destroy(t_mutex *mutex);
 
 //terminate
-void	terminate(t_filo**philos);
+void	terminate(t_n* normas, t_mutex **forks, t_filo**philos);
 void	free_forks(t_mutex**forks);
 
 //updatemutexes

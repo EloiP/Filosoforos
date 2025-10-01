@@ -3,7 +3,7 @@ NAME = philo
 CC = cc
 
 # Compiler flags
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 BFLAGS = -g -fsanitize=address
 
 # Directories

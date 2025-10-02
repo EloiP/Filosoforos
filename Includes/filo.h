@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:13:40 by epascual          #+#    #+#             */
-/*   Updated: 2025/10/01 12:32:56 by epascual         ###   ########.fr       */
+/*   Updated: 2025/10/02 13:04:19 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ void	detach_philo_array(t_filo **philos);
 
 //init
 t_mutex		**init_forks(t_n*normas);
-t_filo	fill_filo(int id, t_n *normas);
-int		init_filos(t_n *normas, t_filo **philos, t_mutex **forks);
+t_filo	fill_filo(int id, t_n *normas, t_mutex **forks);
+t_filo		**init_filos(t_n *normas, t_mutex **forks);
 int		init(t_n *normas, t_filo **philos, int argc, char **argv, t_mutex**forks);
 
 //time

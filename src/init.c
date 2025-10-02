@@ -6,7 +6,7 @@
 /*   By: epascual <epascual@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 12:46:15 by epascual          #+#    #+#             */
-/*   Updated: 2025/10/01 13:09:25 by epascual         ###   ########.fr       */
+/*   Updated: 2025/10/02 13:03:38 by epascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,30 +40,18 @@ t_filo	fill_filo(int id, t_n *normas, t_mutex**forks)
 	filo.ultcomida = actual();
 
 	return (filo);
-
-
-int	init_filos(t_n *normas, t_filo **philos, t_mutex**forks)
-{
-	int	i;
-
-	i = 0;
-	while (i++ < normas->n)
-	{
-		philos[i] = fill_filo(i, normas, forks);
-	}
-	return (0);
 }
-void	free_philos(t_philo **philo_array)
+void	free_philos(t_filo **philos)
 {
 	int	i;
 
 	i = 0;
-	while (philo_array[i])
+	while (philos[i])
 	{
-		free_philo(philo_array[i]);
+		free(philos[i]);
 		i++;
 	}
-	free(philo_array);
+	free(philos);
 }
 
 static int	p_array_len(void **ptr_array)
@@ -76,27 +64,36 @@ static int	p_array_len(void **ptr_array)
 	return (i);
 }
 
-t_philo	**make_philos(t_n info, t_mutex **forks, t_mutex *sinchro)
+t_filo	**init_filos(t_n *normas, t_mutex **forks)
 {
 	int	i;
-	t_philo	**philos;
+	t_filo	**philos;
 
-	philos = ft_calloc(sizeof(t_philo *) * (p_array_len((void **) forks) + 1));
+	philos = ft_calloc(sizeof(t_filo *) * (p_array_len((void **) forks) + 1));
 	if (!philos)
 		return (NULL);
 	i = 0;
 	while (forks[i + 1])
 	{
-		info.id = i + 1;
-		philos[i] = philo_make(info, print, \
-				forks[i], forks[i + 1]);
+		philos[i] = philo_make(normas, forks[i], forks[i + 1]);
 		if (!philos[i])
 			return (free_philos(philos), NULL);
 		i++;
 	}
-	info.id = i + 1;
-	philos[i] = philo_make(info, print, forks[i], forks[0]);
+	philos[i] = philo_make(normas, forks[i], forks[0]);
 	if (!philos[i])
 		return (free_philos(philos), NULL);
 	return (philos);
 }
+/*
+int	init_filos(t_n *normas, t_filo **philos, t_mutex**forks)
+{
+	int	i;
+
+	i = 0;
+	while (i++ < normas->n)
+	{
+		philos[i] = fill_filo(i, normas, forks);
+	}
+	return (0);
+}*/
